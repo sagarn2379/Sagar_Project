@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function ValidateMobNumber(txtMobId) {
+  var fld = document.getElementById(txtMobId);
+   if (fld.value == "") {
+  alert("You didn't enter a phone number.");
+  fld.value = "";
+  fld.focus();
+  return false;
+ }
+  else if (isNaN(fld.value)) {
+  alert("The phone number contains illegal characters.");
+  fld.value = "";
+  fld.focus();
+  return false;
+ }
+ else if (!(fld.value.length == 10)) {
+  alert("The phone number is the wrong length. \nPlease enter 10 digit mobile no.");
+  fld.value = "";
+  fld.focus();
+  return false;
+ }
+}
+</script>
+
+<meta charset="ISO-8859-1">
+<title>Register Developer</title>
+</head>
+<body>
+<div id="container">
+<h2>SIGN UP </h2>
+
+<form action="Register" method="post">
+ <fieldset>
+  <legend>Sign Up </legend>
+  
+  <table border="1" >
+  <tr><td>First Name *:</td><td><input type="text" name="fname" required="required" ></td></tr>
+<tr><td>Last Name :</td><td><input type="text" name="lname" ></td></tr>
+<tr><td>Email ID *:</td><td><input type="email" name="email" required="required" ></td></tr>
+<tr><td>Password * :</td><td><input   type="password" name="password" required="required" ></td></tr>
+<tr><td>Telephone :</td><td><input type="text" name="phone" id="txtMB" onblur="return ValidateMobNumber('txtMB')" ></td></tr>
+ <tr><td> <input type="submit" value="Sign-up"></td></tr>
+
+  </table>
+  </fieldset>
+</form>
+<br>
+If you are registered user, please <a href="index.html">login</a>.
+</div>
+</body>
+</html>
