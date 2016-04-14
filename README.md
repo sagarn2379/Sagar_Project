@@ -5,6 +5,9 @@
 
 Steps
 1.) Download and import it to eclipse. 
+  a.) Click the URL given
+  b.) click Download zip and save the file in your local.
+  c.) Open eclipse, navigate to new >  Import > Import as maven project > brows you local and select.  
 2.) Navigate to Project(on eclipse bar) > clean > ok 
 3.) Right click on project and run as maven install 
 4.) Right click on project and run on server
